@@ -3,6 +3,96 @@
     margin: 0;
     padding: 0;
 }
+#side-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    overflow: scroll;
+}
+#main-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    position: relative;
+    background-color: burlywood;
+}
+#setting-and-menu {
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    width: 100%;
+    position: absolute;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    top: 0;
+}
+#setting-and-menu * {
+    cursor: pointer;
+    font-size: 25px;
+}
+#controllers {
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    right: 0rem;
+    display: flex;
+    height: 3rem;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 0.5rem;
+}
+#controllers * {
+    height: 1rem;
+}
+#forward, #backward {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+#controllers #play-btn {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+#search-div i {
+    font-size: 30px;
+    float: right;
+    margin: 0.5rem;
+}
 #side-bar ul {
+    background-color: green;
+    width: 100%;
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow: auto;
+}
+#side-bar ul li {
+    background-color: yellow;
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 4rem;
+}
+#side-bar ul img {
+    width: 20%;
+    height: 100%;
+}
+#musics {
+    display: flex;
 }
