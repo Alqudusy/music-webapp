@@ -31,7 +31,7 @@ fileURLs.forEach((fileUrl, index) => {
                     musicMetadata[index] = {
                         title: title,
                         artist: artist,
-                        image: tags.picture ? `data:${tags.picture.format};base64,${arrayBufferToBase64(tags.picture.data)}` : 'image.jpg'
+                        image: tags.picture ? `data:${tags.picture.format};base64,${arrayBufferToBase64(tags.picture.data)}` : 'default-image.png'
                     };
 
                     const musicItem = document.querySelectorAll('#musics')[index];
@@ -95,6 +95,10 @@ const forwardButton = document.getElementById('forward');
 let currentIndex = 0;
 
 playButton.addEventListener('click', () => {
+    upadatePlayPause();
+});
+
+function upadatePlayPause() {
     if (audio.paused) {
         audio.play();
         playButton.classList.remove('fa-play');
@@ -104,14 +108,16 @@ playButton.addEventListener('click', () => {
         playButton.classList.remove('fa-pause');
         playButton.classList.add('fa-play');
     }
-});
+}
 
 backwardButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + fileURLs.length) % fileURLs.length;
     updateCurrentMusic(currentIndex);
+    upadatePlayPause();
 });
 
 forwardButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % fileURLs.length;
     updateCurrentMusic(currentIndex);
+    upadatePlayPause();
 });

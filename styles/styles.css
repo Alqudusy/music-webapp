@@ -88,6 +88,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 4rem;
+    cursor: pointer;
 }
 #side-bar ul img {
     width: 20%;
@@ -95,4 +96,8 @@
 }
 #musics {
     display: flex;
+}
+#current-artist-image {
+    width: 40%;
+    height: 40%;
 }
