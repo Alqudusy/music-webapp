@@ -11,45 +11,49 @@
 <div id="side-bar">
     <div id="search-div"><h4>Musics</h4><i class="fa-solid fa-magnifying-glass"></i></div>
     <ul>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
-        <li id="musics"><img src="" alt="music picture"> <p id="title">Placeholder Title</p> <p id="artist-name">Placeholder Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
+        <li id="musics"><img src="" alt="music picture"> <p id="title"> Title</p> <p id="artist-name"> Artist</p></li>
     </ul>
 </div>
     <main id="main-section">
         <div id="setting-and-menu">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-sliders"></i>
+            <i class="fa-solid fa-bars" id="menu-icon" style="position: relative; display: inline-block;"></i>
+            <div class="drop-down-content">
+                <a href="#">Library</a><br>
+                <a href="#">Your musics</a>
+            </div>
+            <i class="fa-solid fa-sliders" style="position: relative; display: inline-block;" id="setting-icon"></i>
+            <div class="setting" style=" height: 20rem; background-color: aliceblue; top: 2.5rem; width: 50%; position: absolute; display: none; justify-content: space-between;padding: 1rem; align-items: right; right: 0; flex-wrap: wrap;">
+               <h2 style="width: 100%; padding: 0; margin: 0;">Settings</h2>
+               <div style="display: flex; justify-content: space-between; width: 100%; flex-wrap: wrap; margin-top: -7rem;">
+                <label for="theme-toggler" style="margin-bottom: 0; padding: 0;">theme:</label>
+                <input type="checkbox" name="theme" id="theme-toggler" style="margin-top: -12rem;">
+            </div>
+            </div>
         </div>
         <img src="default-image.png" alt="Artist" id="current-artist-image">
         <p id="current-artist-name">Name of the artist</p>
         <p id="current-music-title">Music title</p>
         
         <nav id="navigation">
+            <input type="range" name="seeking" id="seeking">
             <div id="controllers">
                 <i class="fa-solid fa-backward-fast" id="backward"></i>
                 <i class="fa-solid fa-play" id="play-btn"></i>
                 <i class="fa-solid fa-forward-fast" id="forward"></i>
+                <input type="range" name="volume" id="volume">
             </div>
         </nav>
-        <i class="fa-regular fa-circle-play"></i>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-chart-simple"></i>
-        <i class="fa-solid fa-list-check"></i>
-        <i class="fa-solid fa-user-group"></i>
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-fire"></i>
-        <i class="fa-solid fa-ellipsis-vertical"></i>
-        <i class="fa-regular fa-heart"></i>
-        <i class="fa-solid fa-pause"></i>
     </main>
 <script src="scripts/script.js"></script>
+<script src="scripts/styling-scripts.js"></script>
 </body>
 </html>

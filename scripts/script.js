@@ -1,3 +1,4 @@
+const audio = new Audio();
 const fileURLs = [
     "musics/Larry_Gaaga_ft_Joeboy_-_Ready_Loadedsongs.com.ng.mp3",
     "musics/Oxlade_ft_Wande_Coal_-_ASUNASA_HOLD_YOUR_WAIST__Loadedsongs.com.ng.mp3",
@@ -62,8 +63,8 @@ function arrayBufferToBase64(buffer) {
     }
     return window.btoa(binary);
 }
+const musicItems = document.querySelectorAll('#musics');
 
-const audio = new Audio();
 
 function updateCurrentMusic(index) {
     const currentMusic = musicMetadata[index];
@@ -79,8 +80,6 @@ function updateCurrentMusic(index) {
     audio.src = fileURLs[index];
     audio.play();
 }
-
-const musicItems = document.querySelectorAll('#musics');
 
 musicItems.forEach((musicItem, index) => {
     musicItem.addEventListener('click', () => {
@@ -120,4 +119,18 @@ forwardButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % fileURLs.length;
     updateCurrentMusic(currentIndex);
     upadatePlayPause();
+});
+const volumeSlider = document.querySelector('#volume');
+volumeSlider.addEventListener('input', () => {
+    audio.volume = parseFloat(volumeSlider.value) / 100;
+});
+const seekingElement = document.querySelector('#seeking');
+seekingElement.addEventListener('input', function() {
+    const seekTime = audio.duration * (this.value / 100); // Calculate seek time based on slider value
+    audio.currentTime = seekTime; // Set audio current time to seek time
+});
+
+audio.addEventListener('timeupdate', function() {
+    const currentTime = (audio.currentTime / audio.duration) * 100; // Calculate current time in percentage
+    seekingElement.value = currentTime; // Update seek bar value
 });

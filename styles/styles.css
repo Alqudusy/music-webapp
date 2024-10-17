@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 0.6s ease-in-out;
 }
 #side-bar {
     position: fixed;
@@ -21,7 +22,7 @@
     align-items: center;
     float: right;
     position: relative;
-    background-color: burlywood;
+    font-size: large;
 }
 #setting-and-menu {
     display: flex;
@@ -46,7 +47,6 @@
     right: 0rem;
     display: flex;
     height: 3rem;
-    background-color: aqua;
     justify-content: center;
     align-items: center;
     gap: 4rem;
@@ -100,4 +100,75 @@
 #current-artist-image {
     width: 40%;
     height: 40%;
+}
+.drop-down-content {
+    padding: 1rem;
+    display: none;
+    position: absolute;
+    top: 2rem;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.drop-down-content a {
+    text-decoration: none;
+    margin-bottom: 1rem;
+    color: black;
+}
+.drop-down-content a:hover {
+    background-color: #e4e1e1;
+}
+#seeking {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3rem;
+}
+@media (max-width: 768px) {
+    #side-bar {
+        width: 100%;
+        background-color: white;
+        height: 75%;
+        top: 3rem;
+    }
+    #controllers {
+        position: fixed;
+        z-index: 5;
+    }
+    #seeking {
+        position: fixed;
+        bottom: 3rem;
+        width: 100%;
+    }
+    #main-section {
+        flex-direction: row;
+        width: 100%;
+        height: 5rem;
+        background-color: white;
+        justify-content: left;
+        position: fixed;
+        align-items: center;
+        bottom: 4rem;
+    }
+    #main-section img {
+        width: 20%;
+        height: 100%;
+    }
+    #menu-icon {
+        position: fixed !important;
+        top: 1rem;
+    }
+    .drop-down-content {
+        position: fixed;
+    }
+    #setting-icon {
+        position: fixed !important;
+        top: 1rem;
+        right: 1rem;
+    }
+    .setting {
+        position: fixed !important;
+    }
 }
