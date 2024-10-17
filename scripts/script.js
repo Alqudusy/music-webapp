@@ -128,11 +128,11 @@ volumeSlider.addEventListener('input', () => {
 });
 const seekingElement = document.querySelector('#seeking');
 seekingElement.addEventListener('input', function() {
-    const seekTime = audio.duration * (this.value / 100); // Calculate seek time based on slider value
-    audio.currentTime = seekTime; // Set audio current time to seek time
+    const seekTime = audio.duration * (this.value / 100);
+    audio.currentTime = seekTime;
 });
 
 audio.addEventListener('timeupdate', function() {
-    const currentTime = (audio.currentTime / audio.duration) * 100; // Calculate current time in percentage
-    seekingElement.value = currentTime; // Update seek bar value
+    const currentTime = (audio.currentTime / audio.duration) * 100;
+    seekingElement.value = currentTime;
 });

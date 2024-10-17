@@ -20,3 +20,23 @@ document.querySelector('#setting-icon').addEventListener('click', () => {
     document.querySelector('#setting-icon').style.zIndex = '3';
 });
 document.querySelector('#seeking').value = 0;
+
+const themeToggler = document.getElementById('theme-toggler');
+
+themeToggler.addEventListener('change', () => {
+    document.body.classList.toggle('light-theme');
+    
+    if (document.body.classList.contains('light-theme')) {
+        localStorage.setItem('theme', 'light');
+    } else {
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
+window.addEventListener('load', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeToggler.checked = true;
+    }
+});

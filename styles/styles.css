@@ -186,3 +186,254 @@
         gap: 2rem;
     }
 }
+/* colors */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+#side-bar {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+#main-section {
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+#setting-and-menu {
+    color: #e0e0e0;
+}
+
+#controllers {
+    background-color: #1e1e1e;
+    color: #bb86fc;
+}
+
+#controllers * {
+    color: #bb86fc;
+}
+
+#forward, #backward {
+    color: #bb86fc;
+}
+
+#play-btn {
+    color: #bb86fc;
+}
+
+#search-div {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+#side-bar ul li {
+    background-color: #232323;
+    border: 1px solid #333333;
+    color: #e0e0e0;
+}
+
+#side-bar ul img {
+    border-radius: 5px;
+}
+
+#musics {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+#current-artist-image {
+    border: 2px solid #bb86fc;
+}
+
+.drop-down-content {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+}
+
+.drop-down-content a {
+    color: #bb86fc;
+}
+
+.drop-down-content a:hover {
+    background-color: #383838;
+}
+
+#seeking {
+    background-color: #1e1e1e;
+}
+
+@media (max-width: 768px) {
+    #side-bar {
+        background-color: #1e1e1e;
+    }
+
+    #controllers {
+        background-color: #242424;
+    }
+
+    #main-section {
+        background-color: #121212;
+    }
+
+    .drop-down-content {
+        background-color: #2b2b2b;
+    }
+
+    #setting-icon {
+        color: #bb86fc;
+    }
+    body {
+        background-color: #ffffff;
+        color: #e0e0e0;
+    }
+}
+
+@media (max-width: 405px) {
+    #controllers {
+        background-color: #1e1e1e;
+    }
+
+    #play-btn {
+        color: #bb86fc;
+    }
+
+    #forward, #backward {
+        color: #bb86fc;
+    }
+}
+/* Light Theme Colors */
+.light-theme body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.light-theme #side-bar {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.light-theme #main-section {
+    background-color: #e6f7ff;
+    color: #333;
+}
+
+.light-theme #setting-and-menu {
+    color: #333;
+}
+
+.light-theme #controllers {
+    background-color: #ffffff;
+    color: #007acc;
+}
+
+.light-theme #controllers * {
+    color: #007acc;
+}
+
+.light-theme #forward, .light-theme #backward {
+    color: #007acc;
+}
+
+.light-theme #play-btn {
+    color: #007acc;
+}
+
+.light-theme #search-div {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.light-theme #side-bar ul li {
+    background-color: #f9fbff;
+    border: 1px solid #d0e9ff;
+    color: #333;
+}
+
+.light-theme #side-bar ul img {
+    border-radius: 5px;
+}
+
+.light-theme #musics {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.light-theme #current-artist-image {
+    border: 2px solid #007acc;
+}
+
+.light-theme .drop-down-content {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.light-theme .drop-down-content a {
+    color: #007acc;
+}
+
+.light-theme .drop-down-content a:hover {
+    background-color: #e6f7ff;
+}
+
+.light-theme #seeking {
+    background-color: #ffffff;
+}
+.light-theme .setting {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) !important;
+    background-color: #ffffff !important;
+    color: #333 !important;
+}
+
+.light-theme .setting h2 {
+    color: #007acc !important;
+}
+
+.light-theme .setting label {
+    color: #333 !important;
+}
+
+.light-theme #theme-toggler {
+    margin-top: -12rem;
+}
+
+
+@media (max-width: 768px) {
+    .light-theme #side-bar {
+        background-color: #ffffff;
+    }
+
+    .light-theme #controllers {
+        background-color: #d0e9ff;
+    }
+
+    .light-theme #main-section {
+        background-color: #f0f8ff;
+    }
+
+    .light-theme .drop-down-content {
+        background-color: #ffffff;
+    }
+
+    .light-theme #setting-icon {
+        color: #007acc;
+    }
+    .light-theme #seeking {
+        background-color: #ffffff !important;
+    }
+}
+
+@media (max-width: 405px) {
+    .light-theme #controllers {
+        background-color: #ffffff;
+    }
+
+    .light-theme #play-btn {
+        color: #007acc;
+    }
+
+    .light-theme #forward, .light-theme #backward {
+        color: #007acc;
+    }
+}
