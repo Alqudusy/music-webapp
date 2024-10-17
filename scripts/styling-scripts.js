@@ -40,3 +40,15 @@ window.addEventListener('load', () => {
         themeToggler.checked = true;
     }
 });
+const checkbox = document.getElementById('theme-toggler');
+const body = document.body;
+
+function toggleBackgroundColor() {
+    if (checkbox.checked) {
+        body.style.backgroundColor = 'white';
+    } else {
+        body.style.backgroundColor = 'black';
+    }
+}
+
+checkbox.addEventListener('change', toggleBackgroundColor);
