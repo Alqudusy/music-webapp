@@ -28,8 +28,10 @@ themeToggler.addEventListener('change', () => {
     
     if (document.body.classList.contains('light-theme')) {
         localStorage.setItem('theme', 'light');
+        checkbox.addEventListener('change', toggleBackgroundColor);
     } else {
         localStorage.setItem('theme', 'dark');
+        checkbox.addEventListener('change', toggleBackgroundColor);
     }
 });
 
@@ -38,6 +40,7 @@ window.addEventListener('load', () => {
     if (savedTheme === 'light') {
         document.body.classList.add('light-theme');
         themeToggler.checked = true;
+        checkbox.addEventListener('change', toggleBackgroundColor);
     }
 });
 const checkbox = document.getElementById('theme-toggler');
