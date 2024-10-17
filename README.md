@@ -1,10 +1,6 @@
-Here’s a sample README file for your music web app. You can modify the details as needed to fit your project.
-
----
-
 # Music Web App
 
-![Music Web App Screenshot](screenshot.png) <!-- Replace with an actual screenshot of your app -->
+![Music Web App Screenshot](Annotation 2024-10-17 033204.png)
 
 ## Table of Contents
 - [Introduction](#introduction)
