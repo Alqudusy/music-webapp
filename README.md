@@ -1,6 +1,6 @@
 # Music Web App
 
-![Music Web App Screenshot](Annotation 2024-10-17 033204.png)
+![Screenshot](https://github.com/user-attachments/assets/f71e2a01-8806-4cea-9861-ab89a7705584)
 
 ## Table of Contents
 - [Introduction](#introduction)
