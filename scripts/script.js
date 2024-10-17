@@ -63,8 +63,8 @@ function arrayBufferToBase64(buffer) {
     }
     return window.btoa(binary);
 }
-const musicItems = document.querySelectorAll('#musics');
 
+const musicItems = document.querySelectorAll('#musics');
 
 function updateCurrentMusic(index) {
     const currentMusic = musicMetadata[index];
@@ -79,10 +79,12 @@ function updateCurrentMusic(index) {
     
     audio.src = fileURLs[index];
     audio.play();
+    updatePlayButton(true); // Ensure play button changes to pause when next/previous is clicked and song starts playing
 }
 
 musicItems.forEach((musicItem, index) => {
     musicItem.addEventListener('click', () => {
+        currentIndex = index; // Update the current index
         updateCurrentMusic(index);
     });
 });
@@ -94,16 +96,24 @@ const forwardButton = document.getElementById('forward');
 let currentIndex = 0;
 
 playButton.addEventListener('click', () => {
-    upadatePlayPause();
+    updatePlayPause();
 });
 
-function upadatePlayPause() {
+function updatePlayPause() {
     if (audio.paused) {
         audio.play();
+        updatePlayButton(true); // Change to pause icon when playing
+    } else {
+        audio.pause();
+        updatePlayButton(false); // Change to play icon when paused
+    }
+}
+
+function updatePlayButton(isPlaying) {
+    if (isPlaying) {
         playButton.classList.remove('fa-play');
         playButton.classList.add('fa-pause');
     } else {
-        audio.pause();
         playButton.classList.remove('fa-pause');
         playButton.classList.add('fa-play');
     }
@@ -112,20 +122,27 @@ function upadatePlayPause() {
 backwardButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + fileURLs.length) % fileURLs.length;
     updateCurrentMusic(currentIndex);
-    upadatePlayPause();
-    audio.play();
 });
 
 forwardButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % fileURLs.length;
     updateCurrentMusic(currentIndex);
-    upadatePlayPause();
-    audio.play();
 });
+
+// Ensure play button is updated when next or previous buttons are clicked
+backwardButton.addEventListener('click', () => {
+    updatePlayButton(true);
+});
+
+forwardButton.addEventListener('click', () => {
+    updatePlayButton(true);
+});
+
 const volumeSlider = document.querySelector('#volume');
 volumeSlider.addEventListener('input', () => {
     audio.volume = parseFloat(volumeSlider.value) / 100;
 });
+
 const seekingElement = document.querySelector('#seeking');
 seekingElement.addEventListener('input', function() {
     const seekTime = audio.duration * (this.value / 100);
