@@ -170,5 +170,19 @@
     }
     .setting {
         position: fixed !important;
+        width: 70% !important;
+    }
+}
+@media (max-width: 405px) {
+    #controllers #play-btn {
+        font-size: 15px;
+        margin-top: 0.1rem;
+    }
+    #forward, #backward {
+        font-size: 15px;
+        margin-bottom: 0.6rem;
+    }
+    #controllers {
+        gap: 2rem;
     }
 }

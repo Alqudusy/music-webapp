@@ -113,12 +113,14 @@ backwardButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + fileURLs.length) % fileURLs.length;
     updateCurrentMusic(currentIndex);
     upadatePlayPause();
+    audio.play();
 });
 
 forwardButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % fileURLs.length;
     updateCurrentMusic(currentIndex);
     upadatePlayPause();
+    audio.play();
 });
 const volumeSlider = document.querySelector('#volume');
 volumeSlider.addEventListener('input', () => {
